@@ -1,0 +1,29 @@
+.im-selected-training-session {
+  width: 100%;
+  .im-selected-session-header {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    .im-selected-session-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    .im-selected-session-title-date {
+      .im-selected-session-date {
+        font-style: italic;
+        color: var(--typeface-medium-color);
+      }
+    }
+  }
+  .im-selected-session-select-day-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,20 @@
+.im-container.im-user-account-dialog {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+
+  .im-user-account-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    flex: 1;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 0 0 0;
+    height: 50%;
+    overflow-y: auto;
+  }
+}

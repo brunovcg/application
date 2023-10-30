@@ -1,0 +1,24 @@
+.im-hot-sheets {
+  max-width: 850px;
+  padding: 20px;
+
+  .im-hot-sheets-messages {
+    margin-top: 20px;
+
+    .im-detail-email {
+      a {
+        color: var(--primary-dark-color);
+        font-weight: bold;
+      }
+    }
+
+    .im-member-support-ticket {
+      cursor: pointer;
+      color: var(--primary-dark-color);
+    }
+  }
+
+  .im-hot-sheets-grid {
+    margin: 20px 0;
+  }
+}

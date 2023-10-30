@@ -1,0 +1,9 @@
+.im-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 10px;
+  li {
+    line-height: 1.3;
+  }
+}

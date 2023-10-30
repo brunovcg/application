@@ -1,0 +1,102 @@
+.im-community-training {
+  width: 100%;
+  margin-top: 30px;
+  .im-community-training-filters {
+    padding: 10px 0;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .im-training-content {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .im-training-option {
+      display: flex;
+      width: 300px;
+      gap: 10px;
+      flex-direction: column;
+      height: 360px;
+      padding: 15px;
+      border-radius: var(--container-border-radius);
+      box-shadow: var(--container-box-shadow);
+      cursor: pointer;
+
+      .im-training-option-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .im-training-title-description {
+          height: 140px;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+          gap: 10px;
+          .im-training-title {
+            max-height: 60px;
+            align-items: flex-start;
+          }
+          .im-training-description {
+            flex: 1;
+          }
+        }
+
+        .im-training-option-details {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          .im-training-level {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+          }
+          .im-training-date {
+            width: 24%;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            color: var(--typeface-medium-color);
+            font-style: italic;
+          }
+
+          .im-resources-info {
+            width: 36%;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--typeface-medium-color);
+            font-style: italic;
+          }
+
+          .im-training-option-caption.im-training-date {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .im-training-thumbnail {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 260px;
+          height: 150px;
+          border-radius: var(--container-border-radius);
+          border: 1px solid var(--container-hover-color);
+        }
+      }
+    }
+  }
+}
+
+.im-products-feedback {
+  margin-top: 50px;
+}

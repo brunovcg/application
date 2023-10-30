@@ -1,0 +1,84 @@
+.im-preferences-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .im-info-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--typeface-medium-color);
+    display: flex;
+    align-items: center;
+  }
+
+  .im-preferences-info-date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .im-primary {
+    .im-info-text {
+      color: var(--primary-color);
+    }
+  }
+
+  .im-invalid {
+    .im-info-text {
+      color: var(--error-color);
+    }
+  }
+
+  .im-valid {
+    .im-info-text {
+      color: var(--valid-color);
+    }
+  }
+
+  .im-info-text {
+    font-size: 11px;
+    font-weight: 600;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    color: var(--typeface-medium-color);
+  }
+
+  .im-preferences-info-caption {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .im-captions-wrapper {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .im-caption {
+      display: flex;
+      gap: 3px;
+      align-items: center;
+      .im-caption-circle {
+        width: 14px;
+        height: 14px;
+      }
+      .im-caption-default {
+        border: 1px solid var(--primary-color);
+        background: var(--primary-color);
+        border-radius: 3px;
+      }
+      .im-caption-invalid {
+        border: 1px solid var(--error-color);
+        background: var(--error-color);
+        border-radius: 3px;
+      }
+      .im-caption-valid {
+        border: 1px solid var(--valid-color);
+        background: var(--valid-color);
+        border-radius: 3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+image: node:16
+
+definitions:
+  steps:
+    - step: &install-node-modules-run-tests-build-stage
+        name: Install Dependencies, Test and Build - Staging
+        deployment: staging-react
+        caches:
+          - node
+        script:
+          - rm -rf node_modules
+          - npm install
+          - npm run test-ci
+          - npm run build
+        artifacts:
+          - node_modules/**
+          - build/**
+    - step: &install-node-modules-run-tests-build-prod
+        name: Install Dependencies, Test and Build - Staging Production
+        deployment: production-react
+        caches:
+          - node
+        script:
+          - rm -rf node_modules
+          - npm install
+          - npm run test-ci
+          - npm run build
+        artifacts:
+          - node_modules/**
+          - build/**
+    - step: &deploy-to-s3-stage
+        name: Deploy to S3 Staging
+        deployment: staging-s3
+        script:
+          - pipe: atlassian/aws-s3-deploy:0.2.4
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              S3_BUCKET: $AWS_BUCKET_NAME
+              ACL: 'public-read'
+              LOCAL_PATH: 'build'
+    - step: &deploy-to-s3-prod
+        name: Deploy to S3 Production
+        deployment: production-s3
+        script:
+          - pipe: atlassian/aws-s3-deploy:0.2.4
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              S3_BUCKET: $AWS_BUCKET_NAME
+              ACL: 'public-read'
+              LOCAL_PATH: 'build'
+
+pipelines:
+  branches:
+    develop:
+      - step: *install-node-modules-run-tests-build-stage
+      - step: *deploy-to-s3-stage
+    main:
+      - step: *install-node-modules-run-tests-build-prod
+      - step: *deploy-to-s3-prod

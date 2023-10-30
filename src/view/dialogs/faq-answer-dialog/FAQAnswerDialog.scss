@@ -1,0 +1,21 @@
+.im-faqs-dialog {
+  padding: 20px;
+  max-height: 100%;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--container-border-radius);
+  background-color: var(--container-white-color);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .im-faqs-dialog-answer {
+    flex: 1;
+    max-height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,142 @@
+// DATE-PICKER - as it uses a PORTAL it is not possible to set in the proper styled components file
+.p-datepicker {
+  width: 250px !important; // best way to override its configs
+  border: 1px solid var(--border-color);
+  border-radius: var(--container-border-radius);
+  background-color: var(--container-medium-color);
+  margin-top: 1px;
+  padding: 10px;
+  box-shadow: var(--container-box-shadow);
+
+  .p-monthpicker,
+  .p-yearpicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 5px;
+    justify-content: center;
+
+    .p-monthpicker-month,
+    .p-yearpicker-year {
+      width: 30%;
+      color: var(--typeface-medium-color);
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .p-datepicker-next,
+  .p-datepicker-prev {
+    background-color: var(--container-light-color);
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: var(--typeface-medium-color);
+    border-radius: 50%;
+    font-size: 25px;
+
+    &:hover {
+      background-color: var(--container-medium-color);
+      color: var(--typeface-medium-color);
+    }
+  }
+
+  .p-datepicker-header {
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    background: var(--container-light-color);
+    border-radius: var(--container-border-radius);
+    display: flex;
+
+    .p-datepicker-title {
+      color: var(--typeface-medium-color);
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+
+      .p-datepicker-month {
+        &::after {
+          content: ' / ';
+          color: var(--typeface-medium-color);
+        }
+      }
+
+      .p-datepicker-month,
+      .p-datepicker-year {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .p-datepicker-calendar-container {
+    font-size: 13px;
+    border: 1px solid var(--border-color);
+    background: var(--container-light-color);
+    border-radius: var(--container-border-radius);
+    padding: 10px;
+
+    .p-datepicker-calendar {
+      border-collapse: inherit;
+      th,
+      td {
+        margin: 5px;
+        color: var(--typeface-medium-color);
+      }
+
+      th {
+        height: 30px;
+      }
+
+      td {
+        width: 41px;
+        height: 30px;
+        vertical-align: middle;
+        border-radius: 50%;
+        text-align: center;
+
+        span,
+        span.p-datepicker-today {
+          display: flex;
+          box-sizing: border-box;
+          justify-content: center;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          padding: 2px;
+          cursor: pointer;
+          margin: 0 2px 1px 0;
+        }
+
+        &.p-datepicker-other-month {
+          color: var(--typeface-light-color);
+        }
+
+        &.p-datepicker-today {
+          span {
+            border: 1px solid var(--typeface-light-color);
+            border-radius: 50%;
+            color: var(--typeface-light-color);
+          }
+        }
+
+        span {
+          &.p-highlight {
+            border: 1px solid var(--primary-color);
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: var(--typeface-white-color);
+            text-shadow: var(--white-text-shadow);
+          }
+        }
+      }
+    }
+  }
+}

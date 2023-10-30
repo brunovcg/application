@@ -1,0 +1,56 @@
+.im-member-support-ticket-form-wrapper {
+  .im-member-support-ticket-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+
+    .im-form-buttons {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .im-member-support-ticket-market-selection {
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    min-height: 60px;
+    align-items: center;
+
+    .im-support-ticket-no-markets {
+      color: var(--error-color);
+      font-weight: bold;
+    }
+
+    .im-support-ticket-state {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .im-current-state-selection {
+        color: var(--typeface-medium-color);
+        font-family: var(--typeface-monospace);
+      }
+
+      .im-support-ticket-counties {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+
+    .im-current-county-selection {
+      color: var(--primary-color);
+    }
+  }
+
+  .im-support-ticket-submit {
+    margin: 0 auto;
+  }
+}

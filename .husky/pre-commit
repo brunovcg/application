@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+chmod ug+x .husky/*
+chmod ug+x .git/hooks/*
+
+npm run lint && npm run format && npm run build && npm run test-no-watch

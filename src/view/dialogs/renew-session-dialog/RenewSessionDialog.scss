@@ -1,0 +1,11 @@
+.im-renew-session-dialog-content {
+  padding: 20px;
+
+  .im-renew-session-dialog-message {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--warning-color);
+  }
+}

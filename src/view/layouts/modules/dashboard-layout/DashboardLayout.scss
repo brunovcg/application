@@ -1,0 +1,14 @@
+.im-dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .im-dashboard-layout-menu {
+    padding: 30px;
+  }
+
+  .im-dashboard-layout-content {
+    margin-top: 35px;
+    flex: 1;
+  }
+}

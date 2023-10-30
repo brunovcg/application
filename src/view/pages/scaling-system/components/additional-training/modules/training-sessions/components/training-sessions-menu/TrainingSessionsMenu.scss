@@ -1,0 +1,53 @@
+.im-training-sessions-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+
+  .im-training-session-card {
+    display: flex;
+    max-width: 100%;
+    gap: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--container-border-radius);
+    box-shadow: var(--container-box-shadow);
+    max-height: 600px;
+    flex-wrap: wrap;
+    background-color: var(--container-white-color);
+    cursor: pointer;
+
+    .im-training-session-image {
+      flex: 1 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 283px;
+        height: 283px;
+      }
+    }
+
+    .im-training-session-card-right-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 20px 10px;
+      width: 330px;
+      max-width: 100%;
+
+      .im-training-sessions-header {
+        height: 210px;
+      }
+
+      .im-training-sessions-details {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        font-size: 12px;
+        color: var(--typeface-medium-color);
+        font-style: italic;
+      }
+    }
+  }
+}

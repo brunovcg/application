@@ -1,0 +1,64 @@
+.im-debug-dev-tools-container {
+  width: 100%;
+  background-color: var(--debug-color);
+  position: fixed;
+  height: 200px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--typeface-white-color);
+
+  .im-debug-dev-tools-header {
+    background-color: var(--debug-light-color);
+    width: 100%;
+    min-height: 70px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+
+    .im-debug-dev-tools-header-left {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .im-debug-tools-logo {
+        display: flex;
+        gap: 5px;
+        h4 {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .im-debug-dev-tools-header-buttons {
+        display: flex;
+        gap: 10px;
+        max-width: 100vw;
+        overflow-x: auto;
+      }
+    }
+
+    .im-debug-dev-tools-header-actions {
+      width: 100px;
+      justify-content: center;
+      display: flex;
+      gap: 5px;
+    }
+  }
+
+  .im-debug-dev-tools-body {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.im-debug-dev-tools-container.im-closed {
+  display: none;
+}

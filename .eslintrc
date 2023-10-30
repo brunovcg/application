@@ -1,0 +1,109 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "airbnb-typescript",
+    "plugin:react/recommended",
+    "plugin:security/recommended",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:sonarjs/recommended",
+    "prettier",
+    // Make sure it's always the last config, so it gets the chance to override other configs.
+    "eslint-config-prettier"
+  ],
+  "plugins": ["react", "prettier", "@typescript-eslint", "security", "react-prefer-function-component", "sonarjs"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": [""],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "ecmaFeatures": {
+      "jsx": false
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "sonarjs/cognitive-complexity": "error",
+    "sonarjs/no-identical-expressions": "error",
+    "react/react-in-jsx-scope": "off",
+    "import/no-unresolved": "off",
+    "multiline-ternary": ["error", "always-multiline"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 140,
+        "ignoreStrings": true
+      }
+    ],
+    "no-empty": "error",
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        "variables": true
+      }
+    ],
+    "space-before-function-paren": "off",
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "offsetTernaryExpressions": true,
+        "ignoredNodes": ["TemplateLiteral > *"]
+      }
+    ],
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx", ".ts"] }],
+    "jsx-a11y/no-static-element-interactions": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "jsx-a11y/click-events-have-key-events": "off",
+    "no-unused-vars": 0,
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "react/jsx-props-no-spreading": "off",
+    "prefer-arrow-callback": "off",
+    "no-plusplus": "off",
+    "import/prefer-default-export": "off",
+    "import/no-named-as-default-member": "off",
+    "arrow-body-style": ["error", "as-needed"],
+    "react/self-closing-comp": ["error", { "component": true, "html": true }],
+    "@typescript-eslint/default-param-last": "off",
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "": "never",
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  }
+}
